@@ -1,0 +1,317 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="utf-8">
+<meta name="color-scheme" content="light">
+<meta name="theme-color" content="#FFFFFF">
+<meta name="viewport" content="width=device-width, initial-scale=1, viewport-fit=cover">
+<title>Future Minds Academy – One-to-One Online Tuition</title>
+<meta name="description" content="One-to-one online tuition in Maths, Science (Physics and Chemistry) and English for Classes 1 to 12, at a time that suits you.">
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link href="https://fonts.googleapis.com/css2?family=Bricolage+Grotesque:wght@600;700;800&family=Figtree:wght@400;500;600&display=swap" rel="stylesheet">
+<style>
+:root{
+  color-scheme:light;
+  --bg:#FFFFFF;
+  --page:linear-gradient(165deg,#FFFFFF 0%,#FBF9FF 22%,#F3EDFE 55%,#EAE1FC 100%); --surface:#FFFFFF; --ink:#1F1B2E; --muted:#5D5970; --line:#E9E5F3;
+  --brand:#6A4FC4; --green:#2E8566; --tint:#F2EDFD; --mint-tint:#E6F6EE;
+  --mint:#BFE9D4; --lav:#DCD0FA; --blush:#F6E4F2;
+  --grad:linear-gradient(120deg,#2E8566 0%,#4F7FA6 50%,#6A4FC4 100%);
+  --grad-soft:linear-gradient(135deg,#E2F6EC 0%,#EFEAFD 55%,#F8ECF6 100%);
+  --glass:rgba(255,255,255,.72); --glass-line:rgba(255,255,255,.9);
+  --hero:radial-gradient(640px 420px at 88% 8%,rgba(196,176,250,.42) 0,transparent 62%),radial-gradient(620px 420px at 6% 92%,rgba(221,208,252,.5) 0,transparent 62%),radial-gradient(420px 300px at 50% 40%,rgba(255,255,255,.7) 0,transparent 70%);
+  --shadow:0 20px 50px rgba(88,64,160,.12);
+  --head:'Bricolage Grotesque','Segoe UI',system-ui,sans-serif;
+  --body:'Figtree','Segoe UI',system-ui,sans-serif;
+  box-sizing:border-box; padding-top:env(safe-area-inset-top,0px); padding-bottom:env(safe-area-inset-bottom,0px);
+}
+html{background:#EAE1FC;scroll-padding-top:calc(76px + env(safe-area-inset-top,0px));scroll-behavior:smooth}
+*{box-sizing:border-box}
+body{margin:0;min-height:100vh;background:var(--page);color:var(--ink);font:400 1.0625rem/1.65 var(--body);-webkit-font-smoothing:antialiased}
+h1,h2,h3{font-family:var(--head);line-height:1.1;margin:0;letter-spacing:-.02em}
+p{margin:0}
+a{color:inherit}
+:focus-visible{outline:3px solid var(--brand);outline-offset:3px;border-radius:8px}
+.wrap{max-width:1120px;margin:0 auto;padding:0 1.25rem}
+.grad-text{background:var(--grad);-webkit-background-clip:text;background-clip:text;color:transparent}
+body::before{content:"";position:fixed;inset:0 0 auto;height:env(safe-area-inset-top,0px);background:var(--surface);z-index:40}
+header{position:sticky;top:env(safe-area-inset-top,0px);z-index:30;background:var(--glass);-webkit-backdrop-filter:saturate(160%) blur(14px);backdrop-filter:saturate(160%) blur(14px);color:var(--ink);border-bottom:1px solid var(--line)}
+header::after{content:"";position:absolute;left:0;right:0;bottom:-1px;height:2px;background:var(--grad);opacity:.55}
+.nav{display:flex;align-items:center;justify-content:space-between;height:72px;gap:1rem}
+.logo{display:flex;align-items:center;gap:.7rem;text-decoration:none;color:var(--ink)}
+.logo svg{width:44px;height:44px;flex:none;filter:drop-shadow(0 6px 12px rgba(106,79,196,.25))}
+.logo b{display:block;font:800 1.2rem/1 var(--head)}
+.logo small{display:block;font:600 .72rem/1.2 var(--body);color:var(--green);letter-spacing:.18em;margin-top:3px}
+.nav ul{display:flex;gap:1.8rem;list-style:none;margin:0;padding:0;font-weight:500;font-size:.98rem}
+.nav ul a{text-decoration:none;color:var(--muted);transition:color .15s}
+.nav ul a:hover{color:var(--brand)}
+.btn{display:inline-flex;align-items:center;justify-content:center;gap:.5rem;padding:.9rem 1.6rem;border-radius:999px;font:600 1rem var(--body);text-decoration:none;border:0;cursor:pointer;transition:transform .15s,box-shadow .15s,background-position .4s}
+.btn:hover{transform:translateY(-1px)}
+.btn-sun{background:linear-gradient(120deg,#2E8566,#5A6FB8 55%,#6A4FC4);background-size:160% 100%;color:#fff;box-shadow:0 10px 24px rgba(106,79,196,.28)}
+.btn-sun:hover{background-position:100% 0;box-shadow:0 14px 30px rgba(106,79,196,.34)}
+.btn-line{border:1.5px solid var(--lav);background:var(--glass);color:var(--brand)}
+.btn-line:hover{border-color:var(--brand)}
+.btn-sm{padding:.6rem 1.2rem;font-size:.95rem}
+
+.hero{background:var(--hero);color:var(--ink);padding:4.5rem 0 5.5rem;overflow:hidden}
+.hero .wrap{display:grid;grid-template-columns:1.1fr .9fr;gap:3.5rem;align-items:center}
+.pill{display:inline-block;padding:.35rem .95rem;border-radius:999px;background:var(--glass);border:1px solid var(--lav);font-size:.92rem;color:var(--brand);font-weight:600;margin-bottom:1.3rem;box-shadow:0 4px 14px rgba(106,79,196,.08)}
+.hero h1{font-size:clamp(2.5rem,6vw,4.2rem);font-weight:800}
+.hero h1 em{font-style:normal;background:var(--grad);-webkit-background-clip:text;background-clip:text;color:transparent}
+.hero .lead{margin:1.3rem 0 2rem;font-size:1.2rem;color:var(--muted);max-width:34rem}
+.cta{display:flex;flex-wrap:wrap;gap:.8rem}
+.promise{background:var(--surface);color:var(--ink);border-radius:26px;padding:1.6rem;box-shadow:var(--shadow);border:1px solid var(--line);max-width:400px;justify-self:end;width:100%;position:relative;transform:rotate(1.5deg)}
+.promise h3{font-size:1.3rem;margin-bottom:1rem}
+.tick{display:flex;gap:.8rem;align-items:flex-start;padding:.8rem .9rem;border-radius:16px;background:var(--grad-soft)}
+.tick+.tick{margin-top:.6rem}
+.tick svg{width:26px;height:26px;flex:none;color:var(--green);margin-top:1px}
+.tick b{display:block;line-height:1.3}
+.tick small{color:var(--muted);font-size:.9rem;line-height:1.4;display:block}
+.promise::before{content:"";position:absolute;left:-22px;bottom:-22px;width:70px;height:70px;border-radius:50%;background:linear-gradient(135deg,#BFE9D4,#DCD0FA);z-index:-1}
+.promise::after{content:"";position:absolute;right:-14px;top:-14px;width:46px;height:46px;border-radius:50%;background:linear-gradient(135deg,#9FDDBF,#B9A2F5);box-shadow:0 8px 20px rgba(106,79,196,.3)}
+
+.stats{margin-top:-2.6rem;position:relative;z-index:2}
+.stats .wrap>div{background:var(--surface);border:1px solid var(--line);border-radius:22px;box-shadow:var(--shadow);display:grid;grid-template-columns:repeat(4,1fr);position:relative;overflow:hidden}
+.stats .wrap>div::before{content:"";position:absolute;inset:0 0 auto;height:3px;background:var(--grad)}
+.stat{padding:1.4rem 1.5rem}
+.stat+.stat{border-left:1px solid var(--line)}
+.stat b{display:block;font:800 1.45rem var(--head);color:var(--brand);background:var(--grad);-webkit-background-clip:text;background-clip:text;-webkit-text-fill-color:transparent}
+.stat span{color:var(--muted);font-size:.95rem}
+
+section{padding:5rem 0}
+.sec-head{max-width:38rem;margin-bottom:2.4rem}
+.sec-head h2{font-size:clamp(1.9rem,4vw,2.7rem);font-weight:700}
+.sec-head h2::after{content:"";display:block;width:56px;height:4px;border-radius:4px;background:var(--grad);margin-top:.9rem}
+.sec-head p{margin-top:.8rem;color:var(--muted)}
+.grid3{display:grid;gap:1.2rem;grid-template-columns:repeat(auto-fit,minmax(260px,1fr))}
+.card{background:var(--surface);border:1px solid var(--line);border-radius:22px;padding:1.8rem;transition:transform .2s,box-shadow .2s,border-color .2s}
+.card:hover{transform:translateY(-3px);box-shadow:var(--shadow);border-color:var(--lav)}
+.card h3{font-size:1.35rem;margin:1rem 0 .5rem}
+.card p{color:var(--muted);font-size:1rem}
+.ico{width:52px;height:52px;border-radius:16px;display:grid;place-items:center;color:#fff;font:800 1.35rem var(--head);box-shadow:0 8px 18px rgba(106,79,196,.2)}
+.chips{display:flex;gap:.5rem;flex-wrap:wrap;margin-top:1.1rem}
+.chips span{padding:.3rem .8rem;border-radius:99px;background:var(--tint);color:var(--brand);font-weight:600;font-size:.9rem}
+.chips span:nth-child(even){background:var(--mint-tint);color:var(--green)}
+.callout{margin-top:1.4rem;display:flex;gap:1.2rem;align-items:center;flex-wrap:wrap;background:var(--grad-soft);border:1px solid var(--line);color:var(--ink);border-radius:22px;padding:1.5rem 1.8rem}
+.callout h3{font-size:1.3rem}
+.callout p{flex:1 1 280px;color:var(--muted)}
+.alt{background:linear-gradient(180deg,rgba(255,255,255,.55),rgba(236,227,253,.55));border-block:1px solid var(--line)}
+.alt .card{background:var(--glass);border-color:var(--glass-line)}
+.feat{display:grid;gap:1.2rem;grid-template-columns:repeat(auto-fit,minmax(240px,1fr))}
+.feat .card h3{margin-top:0}
+.steps{display:grid;gap:1.2rem;grid-template-columns:repeat(auto-fit,minmax(220px,1fr));counter-reset:s}
+.steps .card{counter-increment:s;padding-top:3.4rem;position:relative}
+.steps .card::before{content:counter(s);position:absolute;top:1.3rem;left:1.8rem;width:32px;height:32px;border-radius:50%;background:var(--grad);color:#fff;font:800 1rem var(--head);display:grid;place-items:center;box-shadow:0 6px 14px rgba(106,79,196,.25)}
+.steps .card h3{margin-top:0}
+details{background:var(--glass);border:1px solid var(--glass-line);border-radius:18px;padding:1.1rem 1.4rem}
+details[open]{background:var(--surface);border-color:var(--lav)}
+details+details{margin-top:.8rem}
+summary{cursor:pointer;font:700 1.1rem var(--head);list-style:none;display:flex;justify-content:space-between;gap:1rem}
+summary::after{content:"+";font-size:1.4rem;line-height:1;color:var(--brand)}
+details[open] summary::after{content:"–"}
+summary::-webkit-details-marker{display:none}
+details p{margin-top:.7rem;color:var(--muted)}
+.faq{max-width:760px}
+
+.contact{background:var(--hero);color:var(--ink)}
+.contact .wrap{display:grid;grid-template-columns:1fr 1fr;gap:3.5rem;align-items:start}
+.contact h2{font-size:clamp(1.9rem,4vw,2.7rem)}
+.contact .lead{margin:1rem 0 1.8rem;color:var(--muted)}
+.reach{display:grid;gap:.9rem}
+.reach a{display:flex;gap:1rem;align-items:center;text-decoration:none;padding:1rem 1.2rem;border-radius:18px;background:var(--glass);border:1px solid var(--line);transition:border-color .15s,box-shadow .15s}
+.reach a:hover{border-color:var(--lav);box-shadow:var(--shadow)}
+.reach .ci{width:48px;height:48px;border-radius:14px;display:grid;place-items:center;flex:none}
+.reach .ci svg{width:26px;height:26px}
+.reach small{display:block;color:var(--muted);font-size:.85rem}
+.reach b{font-weight:600;word-break:break-word}
+form{background:var(--surface);color:var(--ink);border-radius:26px;padding:1.8rem;display:grid;gap:1rem;box-shadow:var(--shadow);border:1px solid var(--line);position:relative;overflow:hidden}
+form::before{content:"";position:absolute;inset:0 0 auto;height:4px;background:var(--grad)}
+form h3{font-size:1.4rem}
+label{font-weight:600;font-size:.95rem;display:grid;gap:.35rem}
+input,select,textarea{font:inherit;color:var(--ink);background:var(--bg);border:1.5px solid var(--line);border-radius:14px;padding:.8rem .95rem;width:100%;transition:border-color .15s,box-shadow .15s}
+input:focus,select:focus,textarea:focus{border-color:var(--brand);outline:none;box-shadow:0 0 0 4px rgba(106,79,196,.12)}
+textarea{min-height:84px;resize:vertical}
+.two{display:grid;grid-template-columns:1fr 1fr;gap:1rem}
+footer{background:var(--glass);color:var(--muted);padding:2rem 0;font-size:.95rem;position:relative}
+footer::before{content:"";position:absolute;inset:0 0 auto;height:3px;background:var(--grad)}
+footer .wrap{display:flex;flex-wrap:wrap;justify-content:space-between;gap:.6rem}
+.wa{position:fixed;right:1rem;bottom:calc(1rem + env(safe-area-inset-bottom,0px));z-index:35;width:56px;height:56px;border-radius:50%;background:#25D366;display:grid;place-items:center;box-shadow:0 8px 24px rgba(0,0,0,.2)}
+.wa svg{width:30px;height:30px}
+@media (max-width:860px){
+  .hero{padding:3rem 0 4.5rem}
+  .hero .wrap,.contact .wrap{grid-template-columns:1fr;gap:2.5rem}
+  .promise{justify-self:stretch;max-width:none;transform:none}
+  .nav ul{display:none}
+  .stats .wrap>div{grid-template-columns:1fr 1fr}
+  .stat:nth-child(3){border-left:0}
+  .stat:nth-child(n+3){border-top:1px solid var(--line)}
+  section{padding:3.5rem 0}
+  .two{grid-template-columns:1fr}
+}
+</style>
+</head>
+<body>
+<header>
+  <div class="wrap nav">
+    <a class="logo" href="#top" aria-label="Future Minds Academy home">
+      <svg viewBox="0 0 64 64" aria-hidden="true"><defs><linearGradient id="lg" x1="0" y1="0" x2="1" y2="1"><stop offset="0" stop-color="#3E9C78"/><stop offset="1" stop-color="#7A5CD6"/></linearGradient></defs><rect width="64" height="64" rx="16" fill="url(#lg)"/><circle cx="32" cy="13" r="5" fill="#F6E4F2"/><path d="M32 25C26 21 18 21 11 24v20c7-3 15-3 21 1z" fill="#fff"/><path d="M32 25c6-4 14-4 21-1v20c-7-3-15-3-21 1z" fill="#E6DDFB"/><path d="M32 25v20" stroke="#6A4FC4" stroke-width="2"/></svg>
+      <span><b>Future Minds</b><small>ACADEMY</small></span>
+    </a>
+    <ul>
+      <li><a href="#subjects">Subjects</a></li>
+      <li><a href="#why">Why one to one</a></li>
+      <li><a href="#how">How it works</a></li>
+      <li><a href="#faq">FAQ</a></li>
+      <li><a href="#contact">Contact</a></li>
+    </ul>
+    <a class="btn btn-sun btn-sm" href="#contact">Free demo class</a>
+  </div>
+</header>
+
+<main id="top">
+  <div class="hero">
+    <div class="wrap">
+      <div>
+        <span class="pill">One-to-one online tuition · Classes 1 to 12</span>
+        <h1>One teacher. One student. <em>Real progress.</em></h1>
+        <p class="lead">Personal online tuition in Maths, Science and English, planned around your child and scheduled at a time that suits your family.</p>
+        <div class="cta">
+          <a class="btn btn-sun" href="#contact">Book a free demo class</a>
+          <a class="btn btn-line" href="#how">See how it works</a>
+        </div>
+      </div>
+      <div class="promise">
+        <h3>Learning built around your child</h3>
+        <div class="tick"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.4" stroke-linecap="round" stroke-linejoin="round"><circle cx="12" cy="12" r="10"/><path d="m7.5 12.5 3 3 6-7"/></svg><div><b>Full attention</b><small>Every minute of the lesson is for your child.</small></div></div>
+        <div class="tick"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.4" stroke-linecap="round" stroke-linejoin="round"><circle cx="12" cy="12" r="10"/><path d="m7.5 12.5 3 3 6-7"/></svg><div><b>Your choice of time</b><small>Pick a slot that fits your routine.</small></div></div>
+        <div class="tick"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.4" stroke-linecap="round" stroke-linejoin="round"><circle cx="12" cy="12" r="10"/><path d="m7.5 12.5 3 3 6-7"/></svg><div><b>Their own pace</b><small>We move forward when your child is ready.</small></div></div>
+      </div>
+    </div>
+  </div>
+
+  <div class="stats">
+    <div class="wrap"><div>
+      <div class="stat"><b>1-to-1</b><span>Only personal sessions</span></div>
+      <div class="stat"><b>Classes 1–12</b><span>All school levels</span></div>
+      <div class="stat"><b>Your timing</b><span>You pick the slot</span></div>
+      <div class="stat"><b>Regular updates</b><span>Progress shared with parents</span></div>
+    </div></div>
+  </div>
+
+  <section id="subjects">
+    <div class="wrap">
+      <div class="sec-head">
+        <h2>Subjects we teach</h2>
+        <p>Every lesson is one to one, with clear concepts, regular practice and time for questions.</p>
+      </div>
+      <div class="grid3">
+        <div class="card"><div class="ico" style="background:linear-gradient(135deg,#3E9C78,#2E8566)">∑</div><h3>Mathematics</h3><p>From number sense to algebra and calculus. We build understanding first, then speed and accuracy.</p><div class="chips"><span>Classes 1–12</span></div></div>
+        <div class="card"><div class="ico" style="background:linear-gradient(135deg,#3E9C78,#7A5CD6)">Sc</div><h3>Science</h3><p>Concepts explained with everyday examples, diagrams and worked problems.</p><div class="chips"><span>Physics</span><span>Chemistry</span></div></div>
+        <div class="card"><div class="ico" style="background:linear-gradient(135deg,#8B6FE0,#6A4FC4)">En</div><h3>English</h3><p>Grammar, vocabulary, reading and writing practice that builds marks and confidence.</p><div class="chips"><span>Classes 1–12</span></div></div>
+      </div>
+      <div class="callout">
+        <h3>Exam coming up?</h3>
+        <p>Exam-specific revision is available on request in any of our subjects. Tell us the exam and we will plan it with you.</p>
+        <a class="btn btn-line" href="#contact">Ask about revision</a>
+      </div>
+    </div>
+  </section>
+
+  <section id="why" class="alt">
+    <div class="wrap">
+      <div class="sec-head"><h2>Why one to one works</h2><p>When a teacher can focus on a single student, learning gets faster and less stressful.</p></div>
+      <div class="feat">
+        <div class="card"><h3>Full attention</h3><p>No waiting for turns and no hiding in a crowd. Questions are answered as they arise.</p></div>
+        <div class="card"><h3>Lessons that fit</h3><p>We plan around your child’s strengths, gaps and school syllabus.</p></div>
+        <div class="card"><h3>Flexible timing</h3><p>Students and parents choose a convenient time for each session.</p></div>
+        <div class="card"><h3>Clear progress</h3><p>Regular updates keep parents informed and students motivated.</p></div>
+      </div>
+    </div>
+  </section>
+
+  <section id="how">
+    <div class="wrap">
+      <div class="sec-head"><h2>How it works</h2><p>Getting started takes only a few minutes.</p></div>
+      <div class="steps">
+        <div class="card"><h3>Book a free demo</h3><p>Send us your details and preferred time.</p></div>
+        <div class="card"><h3>Meet your teacher</h3><p>Try a one-to-one class and see how we teach.</p></div>
+        <div class="card"><h3>Set your schedule</h3><p>Choose the days and times that suit your family.</p></div>
+        <div class="card"><h3>Learn and improve</h3><p>Attend sessions and review progress along the way.</p></div>
+      </div>
+    </div>
+  </section>
+
+  <section id="faq" class="alt">
+    <div class="wrap">
+      <div class="sec-head"><h2>Common questions</h2></div>
+      <div class="faq">
+        <details><summary>Are classes in groups?</summary><p>No. All our sessions are one to one, with a teacher focused only on your child.</p></details>
+        <details><summary>Which classes and subjects do you teach?</summary><p>We teach Mathematics, Science (Physics and Chemistry) and English for Classes 1 to 12.</p></details>
+        <details><summary>Can we choose the class timing?</summary><p>Yes. Students and parents can pick a time that is convenient for them.</p></details>
+        <details><summary>Do you offer exam revision?</summary><p>Yes, exam-specific revision is available on request. Tell us the subject and exam, and we will plan it with you.</p></details>
+        <details><summary>Can my child try a class first?</summary><p>Yes. Book a free demo class using the form below and we will confirm your slot.</p></details>
+      </div>
+    </div>
+  </section>
+
+  <section id="contact" class="contact">
+    <div class="wrap">
+      <div>
+        <h2>Book your free demo class</h2>
+        <p class="lead">Tell us about your child and your preferred time. We will get back to you to confirm.</p>
+        <div class="reach">
+          <a href="mailto:futureminds406@gmail.com">
+            <span class="ci" style="background:linear-gradient(135deg,#3E9C78,#7A5CD6);color:#fff"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><rect x="3" y="5" width="18" height="14" rx="3"/><path d="m4 7.5 8 5.5 8-5.5"/></svg></span>
+            <span><small>Email us</small><b>futureminds406@gmail.com</b></span>
+          </a>
+          <a href="https://wa.me/916238647373">
+            <span class="ci" style="background:#25D366"><svg viewBox="0 0 24 24" fill="#fff" aria-hidden="true"><path d="M12 3a9 9 0 0 0-7.7 13.6L3 21l4.5-1.2A9 9 0 1 0 12 3zm4.2 12.3c-.2.5-1 .9-1.4.9-.4.1-.9.1-1.5-.1-2.500-1-4.100-3.500-4.200-3.700-.1-.2-1-1.300-1-2.500s.6-1.700.9-2c.2-.2.5-.2.6-.2h.4c.2 0 .3 0 .5.4l.7 1.700c.1.200 0 .3 0 .4l-.3.500-.3.400c-.1.100-.2.300 0 .5.200.3.700 1.100 1.400 1.700.9.800 1.700 1 2 1.200.2.100.4.100.5-.1l.7-.9c.2-.2.3-.2.5-.1l1.600.8c.2.100.4.200.4.300.1.100.1.600-.1 1.100z"/></svg></span>
+            <span><small>Quick message</small><b>Chat on WhatsApp</b></span>
+          </a>
+        </div>
+      </div>
+      <form id="enquiry">
+        <h3>Request a demo</h3>
+        <label>Student’s name<input name="name" required autocomplete="name"></label>
+        <div class="two">
+          <label>Class<select name="grade" required><option value="">Select</option></select></label>
+          <label>Subject
+            <select name="subject" required>
+              <option value="">Select</option><option>Mathematics</option><option>Physics</option><option>Chemistry</option><option>English</option><option>Exam revision</option>
+            </select>
+          </label>
+        </div>
+        <label>Preferred time
+          <select name="time"><option>Any time</option><option>Morning</option><option>Afternoon</option><option>Evening</option><option>Weekends</option></select>
+        </label>
+        <label>Anything we should know? <textarea name="note"></textarea></label>
+        <button class="btn btn-sun" type="submit">Send on WhatsApp</button>
+      </form>
+    </div>
+  </section>
+</main>
+
+<footer>
+  <div class="wrap">
+    <span>© 2026 Future Minds Academy</span>
+    <span>futureminds406@gmail.com</span>
+  </div>
+</footer>
+
+<a class="wa" href="https://wa.me/916238647373" aria-label="Chat on WhatsApp"><svg viewBox="0 0 24 24" fill="#fff" aria-hidden="true"><path d="M12 3a9 9 0 0 0-7.7 13.6L3 21l4.5-1.2A9 9 0 1 0 12 3zm4.2 12.3c-.2.5-1 .9-1.4.9-.4.1-.9.1-1.5-.1-2.500-1-4.100-3.500-4.200-3.700-.1-.2-1-1.300-1-2.500s.6-1.700.9-2c.2-.2.5-.2.6-.2h.4c.2 0 .3 0 .5.4l.7 1.700c.1.200 0 .3 0 .4l-.3.500-.3.400c-.1.100-.2.300 0 .5.200.3.700 1.100 1.400 1.700.9.800 1.700 1 2 1.200.2.100.4.100.5-.1l.7-.9c.2-.2.3-.2.5-.1l1.600.8c.2.100.4.200.4.300.1.100.1.600-.1 1.100z"/></svg></a>
+
+<script>
+  var WHATSAPP_NUMBER = "916238647373";
+  var g = document.querySelector('select[name="grade"]');
+  for (var i = 1; i <= 12; i++) { var o = document.createElement("option"); o.textContent = "Class " + i; g.appendChild(o); }
+  document.getElementById("enquiry").addEventListener("submit", function (e) {
+    e.preventDefault();
+    var f = new FormData(e.target);
+    var msg = "Hello Future Minds Academy, I would like to book a free one-to-one demo class.\n" +
+      "Student: " + f.get("name") + "\nClass: " + f.get("grade") + "\nSubject: " + f.get("subject") +
+      "\nPreferred time: " + f.get("time") + (f.get("note") ? "\nNote: " + f.get("note") : "");
+    window.open("https://wa.me/" + WHATSAPP_NUMBER + "?text=" + encodeURIComponent(msg), "_blank", "noopener");
+  });
+</script>
+</body>
+</html>
