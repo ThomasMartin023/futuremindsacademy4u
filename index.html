@@ -6,7 +6,7 @@
 <meta name="theme-color" content="#FFFFFF">
 <meta name="viewport" content="width=device-width, initial-scale=1, viewport-fit=cover">
 <title>Future Minds Academy – One-to-One Online Tuition</title>
-<meta name="description" content="One-to-one online tuition in Maths, Science (Physics and Chemistry) and English for Classes 1 to 12, at a time that suits you.">
+<meta name="description" content="One-to-one online tuition in Mathematics, Science (Physics and Chemistry), Languages (English, Hindi and Malayalam) and Computer Science for Classes 1 to 12, across CBSE, ICSE, State and international syllabuses.">
 <link rel="preconnect" href="https://fonts.googleapis.com">
 <link href="https://fonts.googleapis.com/css2?family=Bricolage+Grotesque:wght@600;700;800&family=Figtree:wght@400;500;600&display=swap" rel="stylesheet">
 <style>
@@ -83,6 +83,11 @@ section{padding:5rem 0}
 .sec-head h2{font-size:clamp(1.9rem,4vw,2.7rem);font-weight:700}
 .sec-head h2::after{content:"";display:block;width:56px;height:4px;border-radius:4px;background:var(--grad);margin-top:.9rem}
 .sec-head p{margin-top:.8rem;color:var(--muted)}
+.grid4{display:grid;gap:1.2rem;grid-template-columns:repeat(2,1fr)}
+.card p.tagline{font:700 .95rem var(--head);margin:-.2rem 0 .45rem;background:var(--grad);-webkit-background-clip:text;background-clip:text;color:transparent}
+.syl{grid-column:1/-1;display:flex;flex-wrap:wrap;align-items:center;gap:.7rem 1.2rem;padding:1.1rem 1.5rem;border-top:1px solid var(--line);background:var(--grad-soft)}
+.syl b{font:700 1rem var(--head)}
+.syl .chips{margin-top:0}
 .grid3{display:grid;gap:1.2rem;grid-template-columns:repeat(auto-fit,minmax(260px,1fr))}
 .card{background:var(--surface);border:1px solid var(--line);border-radius:22px;padding:1.8rem;transition:transform .2s,box-shadow .2s,border-color .2s}
 .card:hover{transform:translateY(-3px);box-shadow:var(--shadow);border-color:var(--lav)}
@@ -92,9 +97,11 @@ section{padding:5rem 0}
 .chips{display:flex;gap:.5rem;flex-wrap:wrap;margin-top:1.1rem}
 .chips span{padding:.3rem .8rem;border-radius:99px;background:var(--tint);color:var(--brand);font-weight:600;font-size:.9rem}
 .chips span:nth-child(even){background:var(--mint-tint);color:var(--green)}
-.callout{margin-top:1.4rem;display:flex;gap:1.2rem;align-items:center;flex-wrap:wrap;background:var(--grad-soft);border:1px solid var(--line);color:var(--ink);border-radius:22px;padding:1.5rem 1.8rem}
-.callout h3{font-size:1.3rem}
-.callout p{flex:1 1 280px;color:var(--muted)}
+.callout{margin-top:1.4rem;display:flex;gap:1.2rem;align-items:center;flex-wrap:wrap;background:radial-gradient(420px 220px at 95% 0,rgba(167,139,250,.45) 0,transparent 70%),linear-gradient(135deg,#2B1B66 0%,#3F2A92 55%,#5236B8 100%);border:1px solid #4B35A6;color:#fff;border-radius:26px;padding:2rem 2.2rem;box-shadow:0 24px 50px rgba(43,27,102,.35)}
+.callout h3{font-size:1.6rem;color:#fff}
+.callout p{flex:1 1 280px;color:rgba(255,255,255,.84)}
+.callout .btn{background:#fff;color:#3F2A92;border-color:transparent;box-shadow:0 8px 20px rgba(0,0,0,.22)}
+.callout .btn:hover{background:#F3EDFE}
 .alt{background:linear-gradient(180deg,rgba(255,255,255,.55),rgba(236,227,253,.55));border-block:1px solid var(--line)}
 .alt .card{background:var(--glass);border-color:var(--glass-line)}
 .feat{display:grid;gap:1.2rem;grid-template-columns:repeat(auto-fit,minmax(240px,1fr))}
@@ -148,7 +155,16 @@ footer .wrap{display:flex;flex-wrap:wrap;justify-content:space-between;gap:.6rem
   section{padding:3.5rem 0}
   .two{grid-template-columns:1fr}
 }
+@media (max-width:640px){.grid4{grid-template-columns:1fr}}
+
+/* gentle scroll-in transitions */
+.js-reveal .reveal{opacity:0;translate:0 40px;scale:.96;transition:opacity .9s ease,translate .9s cubic-bezier(.2,.7,.2,1),scale .9s cubic-bezier(.2,.7,.2,1),transform .2s,box-shadow .2s,border-color .2s}
+.js-reveal .reveal.in{opacity:1;translate:0 0;scale:1}
+@media print{.js-reveal .reveal{opacity:1!important;translate:none!important;scale:none!important}}
 </style>
+<script>
+if(!window.matchMedia('(prefers-reduced-motion: reduce)').matches&&'IntersectionObserver' in window){document.documentElement.classList.add('js-reveal');}
+</script>
 </head>
 <body>
 <header>
@@ -174,7 +190,7 @@ footer .wrap{display:flex;flex-wrap:wrap;justify-content:space-between;gap:.6rem
       <div>
         <span class="pill">One-to-one online tuition · Classes 1 to 12</span>
         <h1>One teacher. One student. <em>Real progress.</em></h1>
-        <p class="lead">Personal online tuition in Maths, Science and English, planned around your child and scheduled at a time that suits your family.</p>
+        <p class="lead">Personal online tuition in Maths, Science, Languages and Computer Science, planned around your child and scheduled at a time that suits your family.</p>
         <div class="cta">
           <a class="btn btn-sun" href="#contact">Book a free demo class</a>
           <a class="btn btn-line" href="#how">See how it works</a>
@@ -195,6 +211,7 @@ footer .wrap{display:flex;flex-wrap:wrap;justify-content:space-between;gap:.6rem
       <div class="stat"><b>Classes 1–12</b><span>All school levels</span></div>
       <div class="stat"><b>Your timing</b><span>You pick the slot</span></div>
       <div class="stat"><b>Regular updates</b><span>Progress shared with parents</span></div>
+      <div class="syl"><b>Syllabuses we support</b><div class="chips"><span>CBSE</span><span>ICSE</span><span>State boards</span><span>International: IGCSE, IB</span><span>And others</span></div></div>
     </div></div>
   </div>
 
@@ -204,10 +221,11 @@ footer .wrap{display:flex;flex-wrap:wrap;justify-content:space-between;gap:.6rem
         <h2>Subjects we teach</h2>
         <p>Every lesson is one to one, with clear concepts, regular practice and time for questions.</p>
       </div>
-      <div class="grid3">
+      <div class="grid4">
         <div class="card"><div class="ico" style="background:linear-gradient(135deg,#3E9C78,#2E8566)">∑</div><h3>Mathematics</h3><p>From number sense to algebra and calculus. We build understanding first, then speed and accuracy.</p><div class="chips"><span>Classes 1–12</span></div></div>
         <div class="card"><div class="ico" style="background:linear-gradient(135deg,#3E9C78,#7A5CD6)">Sc</div><h3>Science</h3><p>Concepts explained with everyday examples, diagrams and worked problems.</p><div class="chips"><span>Physics</span><span>Chemistry</span></div></div>
-        <div class="card"><div class="ico" style="background:linear-gradient(135deg,#8B6FE0,#6A4FC4)">En</div><h3>English</h3><p>Grammar, vocabulary, reading and writing practice that builds marks and confidence.</p><div class="chips"><span>Classes 1–12</span></div></div>
+        <div class="card"><div class="ico" style="background:linear-gradient(135deg,#8B6FE0,#6A4FC4)">Aa</div><h3>Languages</h3><p>Grammar, vocabulary, reading, writing and speaking practice that builds marks and confidence.</p><div class="chips"><span>English</span><span>Hindi</span><span>Malayalam</span></div></div>
+        <div class="card"><div class="ico" style="background:linear-gradient(135deg,#4F7FA6,#6A4FC4)">&lt;/&gt;</div><h3>Computer Science</h3><p class="tagline">Learn to think, build and solve.</p><p>Programming, logic and computational thinking, from first steps in coding to school-level Computer Science.</p><div class="chips"><span>Coding</span><span>Problem solving</span></div></div>
       </div>
       <div class="callout">
         <h3>Exam coming up?</h3>
@@ -246,7 +264,7 @@ footer .wrap{display:flex;flex-wrap:wrap;justify-content:space-between;gap:.6rem
       <div class="sec-head"><h2>Common questions</h2></div>
       <div class="faq">
         <details><summary>Are classes in groups?</summary><p>No. All our sessions are one to one, with a teacher focused only on your child.</p></details>
-        <details><summary>Which classes and subjects do you teach?</summary><p>We teach Mathematics, Science (Physics and Chemistry) and English for Classes 1 to 12.</p></details>
+        <details><summary>Which classes and subjects do you teach?</summary><p>We teach Mathematics, Science (Physics and Chemistry), Languages (English, Hindi and Malayalam) and Computer Science for Classes 1 to 12.</p></details>
         <details><summary>Can we choose the class timing?</summary><p>Yes. Students and parents can pick a time that is convenient for them.</p></details>
         <details><summary>Do you offer exam revision?</summary><p>Yes, exam-specific revision is available on request. Tell us the subject and exam, and we will plan it with you.</p></details>
         <details><summary>Can my child try a class first?</summary><p>Yes. Book a free demo class using the form below and we will confirm your slot.</p></details>
@@ -277,7 +295,7 @@ footer .wrap{display:flex;flex-wrap:wrap;justify-content:space-between;gap:.6rem
           <label>Class<select name="grade" required><option value="">Select</option></select></label>
           <label>Subject
             <select name="subject" required>
-              <option value="">Select</option><option>Mathematics</option><option>Physics</option><option>Chemistry</option><option>English</option><option>Exam revision</option>
+              <option value="">Select</option><option>Mathematics</option><option>Physics</option><option>Chemistry</option><option>English</option><option>Hindi</option><option>Malayalam</option><option>Computer Science</option><option>Exam revision</option>
             </select>
           </label>
         </div>
@@ -312,6 +330,28 @@ footer .wrap{display:flex;flex-wrap:wrap;justify-content:space-between;gap:.6rem
       "\nPreferred time: " + f.get("time") + (f.get("note") ? "\nNote: " + f.get("note") : "");
     window.open("https://wa.me/" + WHATSAPP_NUMBER + "?text=" + encodeURIComponent(msg), "_blank", "noopener");
   });
+
+  // Scroll-in transitions: elements fade and rise slightly as they enter view.
+  (function () {
+    if (!document.documentElement.classList.contains("js-reveal")) return;
+    var io = new IntersectionObserver(function (entries) {
+      entries.forEach(function (en) {
+        if (!en.isIntersecting) return;
+        var el = en.target;
+        el.classList.add("in");
+        io.unobserve(el);
+        setTimeout(function () { el.style.transitionDelay = ""; }, 2000);
+      });
+    }, { threshold: 0.12, rootMargin: "0px 0px -10% 0px" });
+    document.querySelectorAll(".sec-head,.card,details,.stats .wrap>div,.callout,.hero .wrap>div,.reach a,form").forEach(function (el) {
+      el.classList.add("reveal");
+      if (el.matches(".card,details,.reach a,.hero .wrap>div")) {
+        var i = Array.prototype.indexOf.call(el.parentElement.children, el);
+        el.style.transitionDelay = Math.min(i, 4) * 130 + "ms";
+      }
+      io.observe(el);
+    });
+  })();
 </script>
 </body>
 </html>
